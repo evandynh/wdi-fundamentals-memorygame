@@ -56,7 +56,7 @@ var isMatch = function(cards) {
 	} else {
 		alert ('Sorry, try again.');
 	}
-	resetImage(cards);
+
 };
 
 var isTwoCards = function() {
@@ -68,16 +68,11 @@ var isTwoCards = function() {
 	}
 	if (cardsInPlay.length === 2) {
 		isMatch(cardsInPlay);
+		this.innerHTML = "";
 		cardsInPlay = [];
 	}
 	
 };	
-
-var resetImage = function(cards) {
-	for (var i = 0; i < cards.length; i++) {
-		cards[i].innerHTML = "<p><p/>";
-	}
-}
 
 createBoard();
 
